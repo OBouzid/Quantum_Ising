@@ -10,7 +10,7 @@ Specifically, we follow this reference [[2][2]] to analyse the statistical prope
 
 The particular structure of the associated quantum circuit strongly depends on the Hamiltonian of the system, and the optimal choices for the ancillary qubits and for the sequence of gates are not trivial. In our project, we reproduce the circuit for an Ising chain without magnetic field (only interaction parameter \(J\) and temperature \(T\), and implement a new one that is capable of simulating the effect of a magnetic field \(h\), which is a key feature not only in the study of materials but also in the numerous applications of this model, such as in finance [[3][3]] or ecology [[4][4]], where the parameters \(h,J,T\) are mapped to the relevant variables in each situation. We further check whether our circuit provides the correct Metropolis probabilities by analising the statistics of measurements.
 
-Finally, it must be noticed that even if this is a quantum implementation, the algorithm is still devised to produce a classical simulation. That is why we have been intended to explore if it could be possible to include further quantum features such as superposition and entanglement in the *physical* qubits (not the ancillary ones). There are precedents [[5][5]] that 
+Finally, it must be noticed that even if this is a quantum implementation, the algorithm is still devised to produce a classical simulation. That is why we have been intended to explore if it could be possible to include further quantum features such as superposition and entanglement in the *physical* qubits (not the ancillary ones). There are different precedents [[5][5],[6][6]] that also address how to perform *genuine* quantum Metropolis sampling. In our approach, we remove the early measurement of the *physical* qubits and extend the Metropolis evolution, implicitly allowing the generation of entanglement between sites, until a measurement is performed after a given number of cycles. For this task, we make use of aditional storage qubits that permit the application of (quantum) Metropolis steps in each site while maintaining the global superposition
 
 
 ## Implementation
@@ -29,6 +29,7 @@ This code makes use of the following libraries:
 [3]: https://doi.org/10.1088/1742-6596/1113/1/012009
 [4]: https://doi.org/10.1098/rsif.2020.0571
 [5]: https://arxiv.org/pdf/0911.3635.pdf
+[6]: https://arxiv.org/pdf/1011.1468.pdf
 
 ## References
 
@@ -41,3 +42,5 @@ This code makes use of the following libraries:
 [[4]] https://doi.org/10.1098/rsif.2020.0571
 
 [[5]] https://arxiv.org/pdf/0911.3635.pdf
+
+[[6]] https://arxiv.org/pdf/1011.1468.pdf
