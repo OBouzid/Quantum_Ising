@@ -15,8 +15,7 @@ Finally, it must be noticed that even if this is a quantum implementation, the a
 ## Directory Struct
 * **quantum_ising.ipynb**: All the logic and circuit implementation and examples of execution cases
 * **Figures**: Graphics and stadistics saved as png used in presentation
-* **quantum_ising_presentation.ppt**: Slides with exposition of concepts and results
-* **quantum_ising_presentation.pdf**: Slides with exposition of concepts and results
+* **Presentations**: Folder with presentations in diferents formats
 * **README.md**
 
 ## Implementation
